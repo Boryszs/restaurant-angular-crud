@@ -18,4 +18,8 @@ export class PracownikService {
     return this.http.get<any[]>(BASE_URL+"pracownik/all-pracownik"); 
   }
 
+  deletePracownik(id){
+    return this.http.delete(`${BASE_URL}pracownik/delete/${id}`)
+  }
+
 }

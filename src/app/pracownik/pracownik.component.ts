@@ -23,8 +23,16 @@ export class PracownikComponent implements AfterViewInit, OnInit{
     this.dataSource.paginator = this.paginator;
   }
 
+  deleteId(id){
+    this.service.deletePracownik(id).subscribe(data => this.getData());
+  }
+
+  getData(){
+    this.service.pracownikAll().subscribe(data => this.dataSource.data = data);
+  }
+
   ngOnInit(): void {
-    this.service.pracownikAll().subscribe(data => this.dataSource.data = data)
+    this.getData();
   }
 
 }

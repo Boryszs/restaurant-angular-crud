@@ -21,7 +21,7 @@
         <ng-container matColumnDef="delete">
           <th mat-header-cell *matHeaderCellDef> Delete </th>
           <td mat-cell *matCellDef="let element"> 
-            <button mat-mini-fab color="accent" aria-label="Example icon button with a menu icon">
+            <button mat-mini-fab color="accent" (click)="deleteId(element.idPracownika)" aria-label="Example icon button with a menu icon">
               <mat-icon>delete</mat-icon>
             </button>
           </td>

@@ -23,8 +23,17 @@ export class OsobaComponent implements AfterViewInit, OnInit{
     this.dataSource.paginator = this.paginator;
   }
 
+  deleteId(id){
+    this.service.deleteOsoba(id).subscribe(data => this.getData());
+  }
+
+
+  getData(){
+     this.service.osobaAll().subscribe(data => this.dataSource.data = data);
+  }
+
   ngOnInit(): void {
-    this.service.osobaAll().subscribe(data => this.dataSource.data = data)
+    this.getData();
   }
 
 }

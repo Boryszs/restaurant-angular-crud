@@ -14,6 +14,10 @@ export class KlientService {
     return this.http.get<any[]>(BASE_URL+"klient/all"); 
   }
 
+  deleteKlient(id){
+    return this.http.delete(`${BASE_URL}klient/delete/${id}`)
+  }
+
   klientAllData(){
     return this.http.get<any[]>(BASE_URL+"klient/all-klient"); 
   }

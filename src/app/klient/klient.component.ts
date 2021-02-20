@@ -25,7 +25,15 @@ export class KlientComponent implements AfterViewInit, OnInit{
     this.dataSource.paginator = this.paginator;
   }
 
+  deleteId(id){
+    this.service.deleteKlient(id).subscribe(data => this.getData());
+  }
+
+  getData(){
+    this.service.klientAll().subscribe(data => this.dataSource.data = data);
+  }
+
   ngOnInit(): void {
-    this.service.klientAll().subscribe(data => this.dataSource.data = data)
+    this.getData();
   }
 }

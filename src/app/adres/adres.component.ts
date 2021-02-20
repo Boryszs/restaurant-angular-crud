@@ -23,8 +23,16 @@ export class AdresComponent implements AfterViewInit, OnInit{
     this.dataSource.paginator = this.paginator;
   }
 
-  ngOnInit(): void {
+  deleteId(id){
+    this.service.deleteAdres(id).subscribe(data => this.getData());
+  }
+
+  getData(){
     this.service.adresyAll().subscribe(data => this.dataSource.data = data)
+  }
+
+  ngOnInit(): void {
+    this.getData();
   }
 
 }
