@@ -8,7 +8,7 @@
                     <br/>
                     <div class="form-group">
                         <label for="name">Login: </label>
-                        <input type = "text" id = "login" name = "login" required [(ngModel)]="dataSource.klient.login">
+                        <input type = "text" id = "login" name = "login" [(ngModel)]="dataSource.klient.login">
                     </div>
 
                     <div class="form-group">
@@ -63,7 +63,7 @@
 
                     <div class="form-group">
                         <label for="name">Kod Pocztowy: </label>
-                    <input type = "text" id="kodPocztowy" name = "kodPocztowy" [(ngModel)]="dataSource.adres.kodPocztowy">
+                    <input type = "text" maxlength = "6" id="kodPocztowy" name = "kodPocztowy" [(ngModel)]="dataSource.adres.kodPocztowy">
                     </div>
 
                     <div class="form-group">

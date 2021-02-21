@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import { PracownikService } from '../services/pracownik.service';
 
 @Component({
   selector: 'app-add-pracownik',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPracownikComponent implements OnInit {
 
-  constructor() { }
+  dataSource;
+
+  constructor(private service :PracownikService,private router: Router) { }
 
   ngOnInit(): void {
+    const data = {
+      pensja:"",
+      Rola:"",
+      osoba:{
+          imie:"",
+          nazwisko:"",
+          pesel:"",
+          dataUrodzenia:"",
+          email:"",
+          telefon:""
+      },
+      adres:{
+          miejscowosc:"",
+          ulica:"",
+          nrDomu:"",
+          kodPocztowy:""
+      }	
+    }
+    this.dataSource = data;
   }
 
+  addPracownik(){
+    this.service.pracownikAdd(this.dataSource).subscribe(i => console.log("add pracownik"));
+    this.router.navigateByUrl('/home');
+  }
 }

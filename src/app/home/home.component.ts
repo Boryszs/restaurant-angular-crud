@@ -40,11 +40,11 @@ export class HomeComponent implements AfterViewInit, OnInit{
   }
 
   editKlient(id){
-      this.router.navigateByUrl('/klient-edit');
+      this.router.navigate(['/klient-edit',id]);
   }
 
   editPracownik(id){
-      this.router.navigateByUrl('/pracownicy-edit');
+      this.router.navigate(['/pracownicy-edit',id]);
   }
 
   addKlient(){

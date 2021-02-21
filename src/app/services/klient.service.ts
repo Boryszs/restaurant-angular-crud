@@ -27,4 +27,8 @@ export class KlientService {
     return this.http.get<any[]>(`${BASE_URL}klient/get-klient/${id}`); 
   }
 
+  klientAdd(data){
+    return this.http.post<any[]>(BASE_URL+"klient/add-klient",data); 
+  }
+
 }

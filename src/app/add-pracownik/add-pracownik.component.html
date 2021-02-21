@@ -1,1 +1,81 @@
-<p>add-pracownik works!</p>
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <div class="container">
+          <div class="mat-elevation-z8">
+            <div class="cointn">
+                <form (ngSubmit)="addPracownik()">
+                    <br/>
+                    <br/>
+                    <div class="form-group">
+                        <label for="name">Pensja: </label>
+                        <input type = "number" id = "pensja" name = "pensja" [(ngModel)]="dataSource.pensja">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Rola: </label>
+                        <mat-select [(value)]="dataSource.rola" placeholder="Wybierz:">
+                            <mat-option value="kelner">kelner</mat-option>
+                            <mat-option value="kucharz">kucharz</mat-option>
+                            <mat-option value="sprzedawca">sprzedawca</mat-option>
+                          </mat-select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Imie: </label>
+                    <input type = "text" id="imie" name = "imie" [(ngModel)]="dataSource.osoba.imie">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Nazwisko: </label>
+                    <input type = "text" id="nazwisko" name = "nazwisko" [(ngModel)]="dataSource.osoba.nazwisko">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Pesel: </label>
+                    <input type = "text" id="pesel" name = "pesel" [(ngModel)]="dataSource.osoba.pesel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Data Urodzenia: </label>
+                    <input type = "text" id="dataUrodzenia" name = "dataUrodzenia" [(ngModel)]="dataSource.osoba.dataUrodzenia">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Email: </label>
+                    <input type = "text" id="email" name = "email" [(ngModel)]="dataSource.osoba.email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Telefon: </label>
+                    <input type = "text" id="telefon" name = "telefon" [(ngModel)]="dataSource.osoba.telefon">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Miejscowosc: </label>
+                    <input type = "text" id="miejscowosc" name = "miejscowosc" [(ngModel)]="dataSource.adres.miejscowosc">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Ulica: </label>
+                    <input type = "text" id="ulica" name = "ulica" [(ngModel)]="dataSource.adres.ulica">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Nr Domu: </label>
+                    <input type = "text" id="nrDomu" name = "nrDomu" [(ngModel)]="dataSource.adres.nrDomu">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Kod Pocztowy: </label>
+                    <input type = "text" maxlength = "6" id="kodPocztowy" name = "kodPocztowy" [(ngModel)]="dataSource.adres.kodPocztowy">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Add</button>
+                    </div>  
+                 </form>
+            </div>
+        </div>
+        </div>
+    </div> 
+  </div>

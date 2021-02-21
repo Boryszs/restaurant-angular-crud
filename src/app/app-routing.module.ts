@@ -17,9 +17,8 @@ const routes: Routes = [
   {path: "osoby", component: OsobaComponent},
   {path: "klienci", component: KlientComponent},
   {path: "pracownicy", component: PracownikComponent},
-  {path: "klient-edit", component: KlienciEditComponent},
-  {path: "pracownicy-edit", component: PracownicyEditComponent},
-  {path: "pracownicy-edit", component: PracownicyEditComponent},
+  {path: "klient-edit/:id", component: KlienciEditComponent},
+  {path: "pracownicy-edit/:id", component: PracownicyEditComponent},
   {path: "add-klient", component: AddKlientComponent},
   {path: "add-pracownik", component: AddPracownikComponent},
 ];
