@@ -10,7 +10,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class AdresComponent implements AfterViewInit, OnInit{
 
-  displayedColumns: string[] = ['id', 'miejscowosc', 'ulica', 'nr domu','kod pocztowy','delete','edit','detail'];
+  displayedColumns: string[] = ['id', 'miejscowosc', 'ulica', 'nr domu','kod pocztowy'];
   dataSource = new MatTableDataSource();
 
   constructor(private service :AdresService) { }
@@ -21,10 +21,6 @@ export class AdresComponent implements AfterViewInit, OnInit{
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-  }
-
-  deleteId(id){
-    this.service.deleteAdres(id).subscribe(data => this.getData());
   }
 
   getData(){

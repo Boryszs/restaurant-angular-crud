@@ -19,7 +19,11 @@ export class PracownikService {
   }
 
   deletePracownik(id){
-    return this.http.delete(`${BASE_URL}pracownik/delete/${id}`)
+    return this.http.delete(`${BASE_URL}pracownik/delete-pracownik/${id}`)
+  }
+
+  klientDataId(id){
+    return this.http.get<any[]>(`${BASE_URL}pracownik/get-pracownik/${id}`); 
   }
 
 }

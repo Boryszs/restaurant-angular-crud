@@ -12,7 +12,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class KlientComponent implements AfterViewInit, OnInit{
 
-  displayedColumns: string[] = ['id', 'login', 'haslo','delete','edit','detail'];
+  displayedColumns: string[] = ['id', 'login', 'haslo'];
   dataSource = new MatTableDataSource();
 
   constructor(private service:KlientService){}
@@ -23,10 +23,6 @@ export class KlientComponent implements AfterViewInit, OnInit{
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-  }
-
-  deleteId(id){
-    this.service.deleteKlient(id).subscribe(data => this.getData());
   }
 
   getData(){

@@ -14,9 +14,4 @@ export class OsobaService {
   osobaAll(){
     return this.http.get<any[]>(BASE_URL+"osoba/all"); 
   }
-
-  deleteOsoba(id){
-    return this.http.delete(`${BASE_URL}osoba/delete/${id}`)
-  }
-
 }

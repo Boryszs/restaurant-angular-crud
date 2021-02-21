@@ -14,8 +14,4 @@ export class AdresService {
   adresyAll(){
     return this.http.get<any[]>(BASE_URL+"adres/all"); 
   }
-
-  deleteAdres(id){
-    return this.http.delete(`${BASE_URL}adres/delete/${id}`)
-  }
 }

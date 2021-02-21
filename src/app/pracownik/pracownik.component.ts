@@ -3,6 +3,7 @@ import {PracownikService } from '../services/pracownik.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 
+
 @Component({
   selector: 'app-pracownik',
   templateUrl: './pracownik.component.html',
@@ -10,7 +11,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class PracownikComponent implements AfterViewInit, OnInit{
 
-  displayedColumns: string[] = ['id', 'pensja', 'rola','delete','edit','detail'];
+  displayedColumns: string[] = ['id', 'pensja', 'rola'];
   dataSource = new MatTableDataSource();
 
   constructor(private service :PracownikService){}
@@ -21,10 +22,6 @@ export class PracownikComponent implements AfterViewInit, OnInit{
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-  }
-
-  deleteId(id){
-    this.service.deletePracownik(id).subscribe(data => this.getData());
   }
 
   getData(){

@@ -11,6 +11,11 @@ import { OsobaComponent } from './osoba/osoba.component';
 import { KlientComponent } from './klient/klient.component';
 import { PracownikComponent } from './pracownik/pracownik.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { KlienciEditComponent } from './klienci-edit/klienci-edit.component';
+import { PracownicyEditComponent } from './pracownicy-edit/pracownicy-edit.component';
+import { AddKlientComponent } from './add-klient/add-klient.component';
+import { AddPracownikComponent } from './add-pracownik/add-pracownik.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,10 +24,15 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     AdresComponent,
     OsobaComponent,
     KlientComponent,
-    PracownikComponent
+    PracownikComponent,
+    KlienciEditComponent,
+    PracownicyEditComponent,
+    AddKlientComponent,
+    AddPracownikComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -2,3 +2,8 @@
 
 html, body { height: 90vh;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif}
+.cointn {
+    display: flex;
+    justify-content: center
+  }
+

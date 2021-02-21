@@ -15,11 +15,16 @@ export class KlientService {
   }
 
   deleteKlient(id){
-    return this.http.delete(`${BASE_URL}klient/delete/${id}`)
+    console.log(`${BASE_URL}klient/delete-klient/${id}`);
+    return this.http.delete(`${BASE_URL}klient/delete-klient/${id}`);
   }
 
   klientAllData(){
     return this.http.get<any[]>(BASE_URL+"klient/all-klient"); 
+  }
+
+  klientDataId(id){
+    return this.http.get<any[]>(`${BASE_URL}klient/get-klient/${id}`); 
   }
 
 }
