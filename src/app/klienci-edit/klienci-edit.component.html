@@ -3,6 +3,7 @@
         <div class="container">
           <div class="mat-elevation-z8">
             <div class="cointn">
+            <ng-container *ngIf="dataSource">
                 <form (ngSubmit)="klientEdit()">
                     <br/>
                     <br/>
@@ -70,6 +71,7 @@
                         <button type="submit" class="btn btn-success">Edit</button>
                     </div>  
                  </form>
+                 </ng-container>
             </div>
         </div>
         </div>

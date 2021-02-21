@@ -7,6 +7,7 @@
             <div class="cointn">
             <button mat-raised-button color="primary" (click)="addKlient()">Add Klient</button> 
             </div> 
+            <ng-container *ngIf="dataSourceKlient">
                       <table mat-table [dataSource]="dataSourceKlient">
                         <ng-container matColumnDef="id">
                           <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -79,6 +80,7 @@
                       <tr mat-header-row *matHeaderRowDef="displayedColumnsK"></tr>
                       <tr mat-row *matRowDef="let row; columns: displayedColumnsK;"></tr>
                     </table>
+                  </ng-container>
                     <mat-paginator #paginator [pageSizeOptions]="[20, 30, 40, 50, 100]" showFirstLastButtons></mat-paginator>  
                   </div>
           </mat-tab>
@@ -90,6 +92,7 @@
                 <div class="cointn">
                   <button mat-raised-button color="primary" (click)="addPracownik()" >Add Pracownik</button> 
                 </div> 
+                <ng-container *ngIf="dataSourcePracownik">
                       <table mat-table [dataSource]="dataSourcePracownik">
                         <ng-container matColumnDef="id">
                           <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -162,6 +165,7 @@
                       <tr mat-header-row *matHeaderRowDef="displayedColumnsP"></tr>
                       <tr mat-row *matRowDef="let row; columns: displayedColumnsP;"></tr>
                     </table>
+                    </ng-container>
                     <mat-paginator #paginator2 [pageSizeOptions]="[20, 30, 40, 50, 100]" showFirstLastButtons></mat-paginator>  
                   </div>
           </mat-tab>

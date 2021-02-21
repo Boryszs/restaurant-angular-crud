@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 export class PracownikService {
   constructor(private http: HttpClient) { }
 
+  id;
+
   pracownikAll(){
     return this.http.get<any[]>(BASE_URL+"pracownik/all"); 
   }
@@ -30,4 +32,8 @@ export class PracownikService {
     return this.http.post(BASE_URL+"pracownik/add-pracownik",data); 
   }
 
+  pracownikEdit(data){
+    this.id = data.pracownik.idPracownika;
+   return this.http.put(`${BASE_URL}pracownik/update-pracownik/${this.id}`,data); 
+ }
 }

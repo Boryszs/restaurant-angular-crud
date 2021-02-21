@@ -28,7 +28,8 @@ export class HomeComponent implements AfterViewInit, OnInit{
 
   ngAfterViewInit() {
     this.dataSourceKlient.paginator = this.paginator;
-    this.dataSourcePracownik.paginator = this.paginator2;
+    this.dataSourcePracownik.paginator = this.paginator2; 
+    this.getData();
   }
 
   deleteKlient(id){
@@ -60,6 +61,6 @@ export class HomeComponent implements AfterViewInit, OnInit{
     this.servicePracownik.pracownikAllData().subscribe(data => this.dataSourcePracownik.data = data)
   }
   ngOnInit(): void {
-    this.getData();
+   
   }
 }
