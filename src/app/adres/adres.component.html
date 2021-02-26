@@ -5,7 +5,8 @@
             <div class="panel-heading">
                   <h2>Adresy</h2>
             </div> 
-            <div class="mat-elevation-z8">      
+            <div class="mat-elevation-z8"> 
+              <ng-container *ngIf="dataSource">   
                 <table mat-table [dataSource]="dataSource">
                 <ng-container matColumnDef="id">
                   <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -30,6 +31,7 @@
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
               </table>
+            </ng-container>  
               <mat-paginator #paginator [pageSizeOptions]="[20, 30, 40, 50, 100]" showFirstLastButtons></mat-paginator>  
             </div>
             </div>
