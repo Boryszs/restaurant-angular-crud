@@ -1,5 +1,6 @@
 # RestaurantCrud
-
+<p styles="center">
+<img src="https://user-images.githubusercontent.com/62262900/114787144-96b84c00-9d7f-11eb-8be2-cf078b4d5f4c.gif">
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
 ## Development server
